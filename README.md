@@ -50,3 +50,19 @@ landed cost including delivery.
 ---
 
 ## Architecture principle
+The browser never talks to external providers directly. Everything goes through
+our server. This keeps API keys server-side only, enforces rate limits and
+plan tiers that can't be bypassed, and keeps business logic out of the client.
+
+The data layer is decoupled through provider interfaces — adding a new source
+platform means adding one adapter, not rewriting the app.
+
+---
+
+## Status
+
+`In development` — core search and pricing engine in progress.
+
+---
+
+*Built solo. Full stack. Every decision made by one person.*
